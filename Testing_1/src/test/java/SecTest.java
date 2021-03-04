@@ -27,10 +27,10 @@ public class SecTest {
     @Test
     public void onAsymptoteLine() {
         System.out.println("\nSec(x) = ∞");
-        double x1 = Math.PI / 2;
-        double x2 = -Math.PI / 2;
-        Assert.assertEquals((1.0 / Math.cos(x1)), Secans.sec(x1), Double.MAX_VALUE);
-        Assert.assertEquals((1.0 / Math.cos(x2)), Secans.sec(x2), Double.MAX_VALUE);
+        double x1 = Math.PI / 2 + Secans.epsilon;
+        double x2 = -Math.PI / 2 - Secans.epsilon;
+        Assert.assertEquals((1.0 / Math.cos(x1)), Secans.sec(x1), 1/Secans.epsilon);
+        Assert.assertEquals((1.0 / Math.cos(x2)), Secans.sec(x2), 1/Secans.epsilon);
     }
 
     @Test
