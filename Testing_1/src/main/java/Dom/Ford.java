@@ -1,15 +1,15 @@
 package Dom;
 
 public class Ford implements Human {
-    String name;
-    Feel feel;
-    Feel feel2;
-    Place place;
-    Place place2;
-    Action action;
-    Fairy fairy;
-    Action action2;
-    Action action3;
+    public String name;
+    public Feel feel;
+    public Feel feel2;
+    public Place place;
+    public Place place2;
+    public Action action;
+    public Fairy fairy;
+    public Action action2;
+    public Action action3;
 
 
     public Ford(Fairy fairy) {
@@ -45,6 +45,7 @@ public class Ford implements Human {
 
     public void stopFeelingEveryThing(){
         this.feel = Feel.Nothing;
+        this.feel2 = Feel.Nothing;
     }
 
 

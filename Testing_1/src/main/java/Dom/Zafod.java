@@ -16,6 +16,10 @@ public class Zafod implements Human{
         this.action = Action.ChargePrice;
     }
 
+    public void stopChangePrice(){
+        this.action = Action.Nothing;
+    }
+
     public void startAnnoyingFord(){
         this.feel = Feel.Annoy;
     }

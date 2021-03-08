@@ -1,9 +1,9 @@
 package Dom;
 
 public class Margarita implements Human {
-    String name;
-    Ford ford;
-    Feel feel;
+    public String name;
+    public Ford ford;
+    public Feel feel;
 
     public Margarita(Ford ford) {
         this.name = "Маргарита ";
@@ -13,6 +13,12 @@ public class Margarita implements Human {
     public void startGossip() {
         this.feel = Feel.Childish;
     }
+
+    public void stopGossip() {
+        this.feel = null;
+    }
+
+
 
 
     @Override

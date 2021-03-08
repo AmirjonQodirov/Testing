@@ -3,17 +3,17 @@ package Dom;
 
 public class Fairy implements Creatures{
 
-    Action action;
-    String name;
-    Place place;
+    public Action action;
+    public String name;
+    public Place place;
 
     public Fairy() {
         this.name = "феи ";
         this.action = Action.Nothing;
     }
 
-    public void startLiving(Action action){
-        this.action = action;
+    public void startLiving(){
+        this.action = Action.Living;
     }
 
     public void setLivingPlace(Place place){
@@ -22,6 +22,7 @@ public class Fairy implements Creatures{
 
     public void stopLiving(){
         this.place = Place.Nowhere;
+        this.action  = Action.Nothing;
     }
 
     @Override
