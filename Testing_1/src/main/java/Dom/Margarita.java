@@ -1,18 +1,26 @@
 package Dom;
 
-public class Margarita implements Human{
+public class Margarita implements Human {
     String name;
     Ford ford;
     Feel feel;
 
-    public Margarita() {
+    public Margarita(Ford ford) {
         this.name = "Маргарита ";
-        this.ford = new Ford();
+        this.ford = ford;
+    }
+
+    public void startGossip() {
         this.feel = Feel.Childish;
     }
 
+
     @Override
     public String do_actions() {
-        return ford.name + "у козалось слухи о " + name + feel.str;
+        if (feel == null) {
+            return "О Маргарите нет слухов";
+        } else {
+            return ford.name + "у козалось слухи о " + name + feel.str;
+        }
     }
 }

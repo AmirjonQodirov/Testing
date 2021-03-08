@@ -14,17 +14,18 @@ public class DomTest {
 
     @Before
     public void setUp(){
-        ford = new Ford();
-        margarita = new Margarita();
-        zafod = new Zafod();
         fairy = new Fairy();
+        ford = new Ford(fairy);
+        zafod = new Zafod(ford);
+        margarita = new Margarita(ford);
     }
+
 
     @Test
     public void testFord() {
         System.out.println("Ford's test \n");
-        Assert.assertEquals(ford.do_actions(), "Форд испытывал будоражащее его волнение но его волнавало что он видит незнакомую планету и больше нечего");
-        Assert.assertEquals(ford.admire(), "Форду разве недостаточно любоваться и не воображать что феи водятся в саду");
+        Assert.assertEquals(ford.do_actions(), "");
+        Assert.assertEquals(ford.admire(), "");
     }
 
     @Test

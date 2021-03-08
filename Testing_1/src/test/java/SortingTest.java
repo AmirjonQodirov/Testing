@@ -1,6 +1,5 @@
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.Arrays;
 import java.util.Random;
 
@@ -39,16 +38,16 @@ public class SortingTest {
 
     @Test
     public void testOnEmptyArr(){
-        System.out.println("Empty");
         int[] arr = {};
+        System.out.println("Empty");
         Assert.assertArrayEquals(InsertionSort.sortArray(arr), arr);
     }
 
     @Test
-    public void testEqualItemsArr(){
-        int[] arr = {1,1,1,1,1,1,1};
-        System.out.println("Equal Items(" + arr.length +" elements)");
-        Assert.assertArrayEquals(InsertionSort.sortArray(arr), arr);
+    public void testEqualItemsBeside1(){
+        int[] arr = {1,1,1,6,1,1,1};
+        System.out.println("Equal Items beside 1item (" + arr.length +" elements)");
+        Assert.assertArrayEquals(InsertionSort.sortArray(arr), Arrays.stream(arr).sorted().toArray());
     }
 
 }

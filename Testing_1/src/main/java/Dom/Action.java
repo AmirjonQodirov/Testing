@@ -5,6 +5,7 @@ public enum Action {
     Looking("видит "),
     Admire("любоваться "),
     Living("водятся "),
+    Nothing("нечего"),
     Imagine("воображать "),
     ChargePrice("набивает себе цену ");
 

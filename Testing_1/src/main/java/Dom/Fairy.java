@@ -9,10 +9,20 @@ public class Fairy implements Creatures{
 
     public Fairy() {
         this.name = "феи ";
-        this.action = Action.Living;
-        this.place = Place.Garden;
+        this.action = Action.Nothing;
     }
 
+    public void startLiving(Action action){
+        this.action = action;
+    }
+
+    public void setLivingPlace(Place place){
+        this.place = place;
+    }
+
+    public void stopLiving(){
+        this.place = Place.Nowhere;
+    }
 
     @Override
     public String do_actions() {

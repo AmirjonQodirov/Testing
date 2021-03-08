@@ -1,47 +1,49 @@
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.Random;
+
+import static org.junit.Assert.*;
 
 public class SecTest {
     @Test
     public void onMiniMaxPoint() {
-        System.out.println("\nSec(x) = +- 1");
-        double x1 = Math.PI;
-        double x2 = -Math.PI;
-        double x3 = 0;
-        Assert.assertEquals((1.0 / Math.cos(x1)), Secans.sec(x1), Secans.epsilon);
-        Assert.assertEquals((1.0 / Math.cos(x2)), Secans.sec(x2), Secans.epsilon);
-        Assert.assertEquals((1.0 / Math.cos(x3)), Secans.sec(x3), Secans.epsilon);
+        System.out.println("\nSec(x) = 1");
+        assertEquals((1.0 / Math.cos(0)), Secans.sec(0), Secans.epsilon);
     }
 
     @Test
-    public void onNoRationalPoint() {
-        System.out.println("\nSec(x) = +- 2");
-        double x1 = Math.PI / 3;
-        double x2 = -4 * Math.PI / 3;
-        Assert.assertEquals((1.0 / Math.cos(x1)), Secans.sec(x1), Secans.epsilon);
-        Assert.assertEquals((1.0 / Math.cos(x2)), Secans.sec(x2), Secans.epsilon);
+    public void onPosInfinity(){
+        System.out.println("\nSec(∞) = NaN");
+        assertEquals(Double.NaN, Secans.sec(Double.POSITIVE_INFINITY), Secans.epsilon);
+    }
+
+    @Test
+    public void onNegInfinity(){
+        System.out.println("\nSec(-∞) = NaN");
+        assertEquals(Double.NaN, Secans.sec(Double.NEGATIVE_INFINITY), Secans.epsilon);
+    }
+
+    @Test
+    public void onNaN() {
+        System.out.println("\nSec(NaN) = NaN");
+        assertEquals(Double.NaN, Secans.sec(Double.NaN), Secans.epsilon);
     }
 
     @Test
     public void onAsymptoteLine() {
         System.out.println("\nSec(x) = ∞");
-        double x1 = Math.PI / 2 + Secans.epsilon;
-        double x2 = -Math.PI / 2 - Secans.epsilon;
-        Assert.assertEquals((1.0 / Math.cos(x1)), Secans.sec(x1), 1/Secans.epsilon);
-        Assert.assertEquals((1.0 / Math.cos(x2)), Secans.sec(x2), 1/Secans.epsilon);
+        assertEquals((1.0 / Math.cos(Math.PI / 2 + Secans.epsilon)), Secans.sec(Math.PI / 2 + Secans.epsilon), 1/Secans.epsilon);
     }
 
     @Test
-    public void onDefaultPoint() {
-        System.out.println("\nDefault 20 points:");
+    public void onDefaultPoints() {
+        System.out.println("\nDefault 5 points:");
         Random rd = new Random();
         double low = -Math.PI/3;
         double high = Math.PI/3;
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 5; i++) {
             double x = low + (high - low) * rd.nextDouble();
-            Assert.assertEquals((1.0 / Math.cos(x)), Secans.sec(x), Secans.epsilon);
+            assertEquals((1.0 / Math.cos(x)), Secans.sec(x), Secans.epsilon);
         }
     }
 
