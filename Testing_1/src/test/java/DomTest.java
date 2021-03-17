@@ -17,7 +17,14 @@ public class DomTest {
         margarita = new Margarita(ford);
     }
 
-    //Ford's tests
+    /*
+    Ford's tests
+
+    Глядя на открывшееся им зрелище, Форд испытывал будоражащее его волнение, но его волновало лишь то,
+    что он видит незнакомую ему планету, и больше ничего.
+    Разве недостаточно просто любоваться прекрасным садом,
+    и не воображать при этом, что там водятся феи?
+     */
     @Test
     public void testFordFeel1() {
         System.out.println("Ford's feel1 test \n");
@@ -59,7 +66,12 @@ public class DomTest {
         assertEquals(ford.admire(), "Форду разве недостаточно любоваться и не воображать что феи водятся в саду");
     }
 
-    //Zafod's tests
+
+    /*
+    Zafod's tests
+
+    Его раздражало то, что Зафод пытается набить себе цену.
+     */
     @Test
     public void testZafodAnnoyingFord(){
         zafod.startAnnoyingFord();
@@ -72,7 +84,12 @@ public class DomTest {
         assertEquals(zafod.do_actions(), "Задоф не набивает себе цену");
     }
 
-    //Margarita's tests
+
+    /*
+    Margarita's tests
+
+    Вся эта чепуха о Магратее казалась Форду ребячеством.
+     */
     @Test
     public void testActionMargarita(){
         margarita.startGossip();
@@ -84,7 +101,13 @@ public class DomTest {
         assertEquals(margarita.do_actions(), "О Маргарите нет слухов");
     }
 
-    //Fairy's tests
+
+    /*
+    Fairy's tests
+
+    Разве недостаточно просто любоваться прекрасным садом,
+    и не воображать при этом, что там водятся феи?
+     */
     @Test
     public void testFairyLiving(){
         fairy.startLiving();
