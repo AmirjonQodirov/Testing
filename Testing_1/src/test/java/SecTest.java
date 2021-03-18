@@ -12,15 +12,47 @@ public class SecTest {
     }
 
     @Test
+    public void posOnAsymptoteXLineEps() {
+        System.out.println("\nSec(x) = 1");
+        assertEquals((1.0 / Math.cos(0+Secans.epsilon)), Secans.sec(0+Secans.epsilon), Secans.epsilon);
+    }
+    @Test
+    public void posOnAsymptoteXLineEps2() {
+        System.out.println("\nSec(x) = 1");
+        assertEquals((1.0 / Math.cos(0-Secans.epsilon)), Secans.sec(0-Secans.epsilon), Secans.epsilon);
+    }
+
+    @Test
     public void negOnAsymptoteXLine() {
         System.out.println("\nSec(x) = -1");
         assertEquals((1.0 / Math.cos(Math.PI)), Secans.sec(Math.PI), Secans.epsilon);
     }
 
     @Test
+    public void negOnAsymptoteXLineEps() {
+        System.out.println("\nSec(x) = -1");
+        assertEquals((1.0 / Math.cos(Math.PI+Secans.epsilon)), Secans.sec(Math.PI+Secans.epsilon), Secans.epsilon);
+    }
+    @Test
+    public void negOnAsymptoteXLineEps2() {
+        System.out.println("\nSec(x) = -1");
+        assertEquals((1.0 / Math.cos(Math.PI-Secans.epsilon)), Secans.sec(Math.PI-Secans.epsilon), Secans.epsilon);
+    }
+
+    @Test
     public void onAsymptoteYLine() {
         System.out.println("\nSec(x) = ∞");
-        assertEquals((1.0 / Math.cos(Math.PI / 2 + Secans.epsilon)), Secans.sec(Math.PI / 2 + Secans.epsilon), 1 / Secans.epsilon);
+        assertEquals(Double.NaN, Secans.sec(Math.PI / 2), Secans.epsilon);
+    }
+    @Test
+    public void onAsymptoteYLineEps() {
+        System.out.println("\nSec(x) = ∞");
+        assertEquals((1.0 / Math.cos(Math.PI / 2 + Secans.epsilon)), Secans.sec(Math.PI / 2 + Secans.epsilon),  1/Secans.epsilon);
+    }
+    @Test
+    public void onAsymptoteYLineEps2() {
+        System.out.println("\nSec(x) = ∞");
+        assertEquals((1.0 / Math.cos(Math.PI / 2 - Secans.epsilon)), Secans.sec(Math.PI / 2 - Secans.epsilon),  1/Secans.epsilon);
     }
 
     //test on Domain of a function
@@ -50,9 +82,32 @@ public class SecTest {
         assertEquals((1.0 / Math.cos(Math.PI / 3)), Secans.sec(Math.PI / 3), Secans.epsilon);
     }
     @Test
+    public void onPiDiv3Eps() {
+        System.out.println("\nSec(pi/3) = 2");
+        assertEquals((1.0 / Math.cos(Math.PI / 3+Secans.epsilon)), Secans.sec(Math.PI / 3+Secans.epsilon), Secans.epsilon);
+    }
+    @Test
+    public void onPiDiv3Eps2() {
+        System.out.println("\nSec(pi/3) = 2");
+        assertEquals((1.0 / Math.cos(Math.PI / 3-Secans.epsilon)), Secans.sec(Math.PI / 3-Secans.epsilon), Secans.epsilon);
+    }
+
+    @Test
     public void onPiDiv6() {
         System.out.println("\nSec(pi/6) = 1.1547");
         assertEquals((1.0 / Math.cos(Math.PI / 6)), Secans.sec(Math.PI / 6), Secans.epsilon);
+    }
+
+    @Test
+    public void onPiDiv6Eps() {
+        System.out.println("\nSec(pi/6) = 1.1547");
+        assertEquals((1.0 / Math.cos(Math.PI / 6+Secans.epsilon)), Secans.sec(Math.PI / 6+Secans.epsilon), Secans.epsilon);
+    }
+
+    @Test
+    public void onPiDiv6Eps2() {
+        System.out.println("\nSec(pi/6) = 1.1547");
+        assertEquals((1.0 / Math.cos(Math.PI / 6-Secans.epsilon)), Secans.sec(Math.PI / 6-Secans.epsilon), Secans.epsilon);
     }
     @Test
     public void onMinusPiDiv3() {
@@ -60,9 +115,14 @@ public class SecTest {
         assertEquals((1.0 / Math.cos(-Math.PI / 3)), Secans.sec(-Math.PI / 3), Secans.epsilon);
     }
     @Test
-    public void onMinusPiDiv6() {
-        System.out.println("\nSec(-pi/6) = 1.1547");
-        assertEquals((1.0 / Math.cos(-Math.PI / 6)), Secans.sec(-Math.PI / 6), Secans.epsilon);
+    public void onMinusPiDiv3Eps() {
+        System.out.println("\nSec(-pi/3) = 2");
+        assertEquals((1.0 / Math.cos(-Math.PI / 3+Secans.epsilon)), Secans.sec(-Math.PI / 3+Secans.epsilon), Secans.epsilon);
+    }
+    @Test
+    public void onMinusPiDiv3Eps2() {
+        System.out.println("\nSec(-pi/3) = 2");
+        assertEquals((1.0 / Math.cos(-Math.PI / 3-Secans.epsilon)), Secans.sec(-Math.PI / 3-Secans.epsilon), Secans.epsilon);
     }
 
 
