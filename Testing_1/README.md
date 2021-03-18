@@ -12,4 +12,4 @@
 
 **Дом**
 
-![](https://github.com/AmirjonQodirov/Testing/blob/main/Testing_1/diagram.png)
+![](https://github.com/AmirjonQodirov/Testing/blob/main/Testing_1/dom.png)
