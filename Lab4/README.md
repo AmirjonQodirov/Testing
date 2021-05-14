@@ -58,3 +58,38 @@
    
 
 ### Описание конфигурации JMeter для стресс-тестирования.
+
+План теста:
+
+![](https://github.com/AmirjonQodirov/Testing/blob/main/Lab4/screenshots/stress_test_plan.PNG)
+
+**Примеры конфигурации при которых тест не проходит.**
+
+- Конфигурация 1 ($2700): 
+
+  ![](https://github.com/AmirjonQodirov/Testing/blob/main/Lab4/screenshots/stress_res1.PNG)
+
+- Конфигурация 2 ($2800):
+
+  ![](https://github.com/AmirjonQodirov/Testing/blob/main/Lab4/screenshots/stress_res2.PNG)
+
+- Конфигурация 3 ($4800):
+
+  ![](https://github.com/AmirjonQodirov/Testing/blob/main/Lab4/screenshots/stress_res3.PNG)
+  
+  
+**Примеры конфигурации при которых тест проходит.**
+
+- Конфигурация 2 ($2800):
+
+  ![](https://github.com/AmirjonQodirov/Testing/blob/main/Lab4/screenshots/stress_res2_2.PNG)
+  
+- Конфигурация 3 ($4800):
+
+  ![](https://github.com/AmirjonQodirov/Testing/blob/main/Lab4/screenshots/stress_res3_2.PNG)
+  
+  
+### Вывод
+Вторая конфигурация показала себя гораздо лучше, чем первая и третья, и в нагрузочном тестировании и в стресс тестировании. 
+У первой конфигурации самый худший результат и время отклика и время обработки запроса выше чем у 1-й и 3-й
+Разница цены между первой и второй составляет 100 долларов и оптимальным выбором является вторая конфигурация, она хоть и дороже но время отклика меньше.
